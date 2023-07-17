@@ -11,9 +11,15 @@
 
 /***** utilities starts *****/
 .hidden{
-  visibility: hidden;
-  height: 0;
-  width: 0;
+  display: none;
+}
+
+.fade-out{
+  opacity: 0;
+}
+
+.fade-in{
+  opacity: 1;
 }
 
 /***** utilities ends *****/
@@ -159,9 +165,9 @@
 }
 
 .input-wrapper{
+  transition: opacity .3s ease-in-out;
   margin-top: .75rem;
 }
-
 
 
 .input-wrapper:first-child,
@@ -193,9 +199,7 @@ form input:not([type="submit"]){
   padding-left: 1rem;
 }
 
-/* form input:not([type="submit"]).wrong{
-  border-color: red;
-} */
+
 
 form input:not([type="submit"]):focus-visible{
   outline: none;
@@ -203,6 +207,10 @@ form input:not([type="submit"]):focus-visible{
   border-left-color: rgb(100, 72, 254);
   border-right-color: rgb(96, 5, 148);
   border-bottom-color: rgb(96, 5, 148);
+}
+
+form input:not([type="submit"]).wrong{
+  border-color: red;
 }
 
 
@@ -222,6 +230,7 @@ input[type="submit"]{
   border: unset;
   border-radius: .5rem;
   background-color: var(--violet-dark);
+  cursor: pointer;
 }
 
 @media (min-width: 64rem) {
@@ -259,6 +268,8 @@ input[type="submit"]{
   grid-column: 1 / 3;
   text-align: center;
   margin-top: 1.25rem;
+  transition: 
+    opacity .3s ease-in-out
 }
 
 .thanks img{
