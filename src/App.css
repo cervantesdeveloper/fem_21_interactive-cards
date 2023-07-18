@@ -40,8 +40,8 @@
 .card-display{
   position: relative;
   height: 15rem;
-  background-image: url("./src/assets/bg-main-mobile.png"); 
   background-size: cover;
+  background-image: url(../public/bg-main-mobile.png);
 }
 
 .card-display__card-front, 
@@ -59,7 +59,6 @@
   z-index: 100;
   left: 1rem;
   bottom: -2.6875rem;
-  background-image: url("./src/assets/bg-card-front.png");
 }
 
 .card-display__card-front img{
@@ -95,7 +94,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-image: url("./src/assets/bg-card-back.png");
+  
 }
 
 .card-display__card-back p {
@@ -109,7 +108,7 @@
     margin-right: 8rem;
     width: 33%;
     height: inherit;
-    background-image: url("./src/assets/bg-main-desktop.png"); 
+    background-image: url(../public/bg-main-desktop.png);
   }
 
   .card-display__card-front,

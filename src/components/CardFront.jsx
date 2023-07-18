@@ -1,4 +1,5 @@
 import bankLogo from "../assets/card-logo.svg";
+import cardImage from "../assets/bg-card-front.png";
 
 import { useContext } from "react";
 import InfoContext from "../context/InfoContext";
@@ -7,7 +8,7 @@ export default function CardFront(){
     const {cardNumber, name, month, year} = useContext(InfoContext)
 
     return(
-        <div className="card-display__card-front">
+        <div className="card-display__card-front" style={{backgroundImage: `url(${cardImage})`}}>
             <img src={bankLogo} alt="logo of bank" />
             <p>
                 <span>{cardNumber.substring(0, 4) }</span>
